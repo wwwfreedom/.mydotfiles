@@ -34,6 +34,7 @@ values."
      better-defaults
      emacs-lisp
      git
+     dockerfile
      markdown
      golden-ratio
      (shell :variables shell-default-shell 'eshell)
@@ -447,6 +448,13 @@ you should place your code here."
     (when buffer-file-name (save-buffer)))
   (defadvice windmove-right (before other-window-now activate)
     (when buffer-file-name (save-buffer)))
+
+  ;; save buffer on focus lost
+  (add-hook 'focus-out-hook
+            (defun save-current-buffer-if-needed ()
+              (interactive)
+              (when (and (buffer-file-name) (buffer-modified-p))
+                (save-buffer))))
 
   (message "end of user-config")
   )
