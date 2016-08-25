@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+#name : fa-arrow
+#key : fa-arrow
+#contributor : Kevin Truong
+# --
+($1) => $0

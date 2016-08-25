@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+#name : class-component
+#key : rcc-component
+#contributor : Kevin Truong
+# --
+import React, {Component, PropTypes} from 'react'
+
+export class $1 extends Component {
+  static propTypes = {
+   $2
+  }
+  render() {
+    return $0
+  }
+}

@@ -1,0 +1,4 @@
+#key : console.log.variable 
+#name : console.log.variable
+# --
+console.log("$1", $1);

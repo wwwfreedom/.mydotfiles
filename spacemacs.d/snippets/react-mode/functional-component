@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+#name : functional-component
+#key : fcc-component
+#contributor : Kevin Truong
+# --
+import React, {PropTypes} from 'react'
+import sty from './`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`.scss'
+
+export default function `(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`($2) {
+  return (
+    <div className=$3>
+      $4
+    </div>
+  )
+}
+
+`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`.propTypes = {
+  $5: PropTypes.$6
+}
