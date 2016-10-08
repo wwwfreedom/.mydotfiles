@@ -48,6 +48,8 @@ values."
      fasd
      colors
      python
+     ruby
+     ruby-on-rails
      html
      javascript
      react
@@ -123,9 +125,9 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         monokai
                          sanityinc-tomorrow-bright
                          spacemacs-dark
+                         monokai
                          )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
@@ -265,7 +267,7 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-  
+
   ;; add emmet mode to react mode
   (add-hook 'react-mode-hook 'emmet-mode)
 
@@ -286,7 +288,7 @@ you should place your code here."
   ;; https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org#powerline-separators
   (setq powerline-default-separator nil)
   (setq-default evil-search-highlight-persist nil)  ;; <- does not work
-  (setq paradox-github-token "fe73ed33ae0a3892a3f000db351e004a87b26af7") 
+  (setq paradox-github-token "fe73ed33ae0a3892a3f000db351e004a87b26af7")
 
   ;; add "--hidden" to the default ag argument list
   (setq ag-arguments '("--hidden" "--nocolor" "--literal" "--line-number" "--smart-case" "--nogroup" "--column" "--stats" "--"))
@@ -306,7 +308,7 @@ you should place your code here."
   (setq helm-recentf-fuzzy-match t)
 
   ;; show the filepath in the frame title
-  ;; http://emacsredux.com/blog/2013/04/07/display-visited-files-path-in-the-frame-title/ 
+  ;; http://emacsredux.com/blog/2013/04/07/display-visited-files-path-in-the-frame-title/
   (setq frame-title-format
         '((:eval (if (buffer-file-name)
                      (abbreviate-file-name (buffer-file-name))
@@ -383,7 +385,7 @@ you should place your code here."
 
   ;; set .js files to react mode
   (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
-  
+
   (global-evil-matchit-mode 1)
 
   (add-to-list 'auto-mode-alist '("www\\.saltycrane\\.com" . web-mode))
