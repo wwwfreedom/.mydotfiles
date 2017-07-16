@@ -1,1 +1,1 @@
-tes
+eval "$(rbenv init -)"
