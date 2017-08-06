@@ -158,6 +158,11 @@ alias z='fasd_cd -d'
 alias zz='fasd_cd -d -i'
 alias v='f -e vim' # quick opening files with vim
 
+# source nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # custom plugin that need to be source remember to update this regularly
 source ~/.mydotfiles/zshPlugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.mydotfiles/zshPlugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
