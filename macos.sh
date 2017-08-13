@@ -1,3 +1,4 @@
+# to use this file you just have to type 'source macos.sh' in terminal or iterm
 #!/usr/bin/env bash
 
 # ~/.macos — https://mths.be/macos
