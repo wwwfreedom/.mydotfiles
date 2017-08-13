@@ -51,7 +51,7 @@ ZSH_THEME="Honukai"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git vi-mode extract osx web-search brew last-working-dir fasd)
 
-# User configuration    
+# User configuration
 
 # export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -148,20 +148,24 @@ alias reload="exec $SHELL -l"
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
-alias a='fasd -a' 
-alias s='fasd -si' 
+alias a='fasd -a'
+alias s='fasd -si'
 alias d='fasd -d'
-alias f='fasd -f' 
-alias sd='fasd -sid' 
-alias sf='fasd -sif' 
+alias f='fasd -f'
+alias sd='fasd -sid'
+alias sf='fasd -sif'
 alias z='fasd_cd -d'
 alias zz='fasd_cd -d -i'
 alias v='f -e vim' # quick opening files with vim
+alias python='python3'
 
 # source nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# for python pyenv setup
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # custom plugin that need to be source remember to update this regularly
 source ~/.mydotfiles/zshPlugins/zsh-autosuggestions/zsh-autosuggestions.zsh
