@@ -27,7 +27,7 @@ values."
       :variables
       auto-completion-enable-snippets-in-popup t
       auto-completion-return-key-behavior 'complete
-      auto-completion-tab-key-behavior 'cycle
+      auto-completion-tab-key-behavior 'complete
       auto-completion-enable-sort-by-usage t
       auto-completion-private-snippets-directory "~/.spacemacs.d/snippets/"
       :disabled-for org erc)
