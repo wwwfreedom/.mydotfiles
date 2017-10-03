@@ -1,5 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+#export PATH=~/anaconda/bin:$PATH
+export PATH="/Users/tiger/anaconda/bin:$PATH"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -157,7 +159,7 @@ alias sf='fasd -sif'
 alias z='fasd_cd -d'
 alias zz='fasd_cd -d -i'
 alias v='f -e vim' # quick opening files with vim
-alias python='python3'
+# alias python='python3'
 
 # source nvm
 export NVM_DIR="$HOME/.nvm"
