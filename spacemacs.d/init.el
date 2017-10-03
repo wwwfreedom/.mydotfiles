@@ -64,6 +64,7 @@ values."
                                       evil-matchit
                                       nginx-mode
                                       yaml-mode
+                                      prettier-js
                                       )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(
@@ -284,6 +285,20 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+
+  ;; add prettier to react mode
+  (add-hook 'react-mode-hook 'prettier-js-mode)
+  (add-hook 'js2-mode-hook 'prettier-js-mode)
+  (add-hook 'web-mode-hook 'prettier-js-mode)
+
+  ;; add prettier rules
+  (setq prettier-js-args '(
+                           "--trailing-comma" "es5"
+                           "--bracket-spacing" "true"
+                           "--no-semi"
+                           "--single-quote"
+                           "--print-width" "100"
+                           ))
 
   ;; https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org#powerline-separators
   (setq powerline-default-separator nil)
