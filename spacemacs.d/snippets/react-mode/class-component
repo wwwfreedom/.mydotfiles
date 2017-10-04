@@ -3,16 +3,25 @@
 #key : rcc-component
 #contributor : Kevin Truong
 # --
-import React, {Component, PropTypes} from 'react'
+import React, {Component} from 'react'
+import Proptypes from 'prop-types'
 
-class $1 extends Component {
+class $1`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))` extends Component {
   static propTypes = {
   }
   render() {
     return (
-      $0
+      <div className='`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`Con'>
+          $0
+        <style jsx>
+          {\`
+            .`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`Con {
+            }
+          \`}
+        </style>
+      </div>
     )
   }
 }
 
-export default $1
+export default $1`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`
