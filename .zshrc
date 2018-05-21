@@ -159,6 +159,8 @@ alias sf='fasd -sif'
 alias z='fasd_cd -d'
 alias zz='fasd_cd -d -i'
 alias v='f -e vim' # quick opening files with vim
+alias pg-start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+alias pg-stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 # alias python='python3'
 
 # source nvm
